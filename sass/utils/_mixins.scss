@@ -1,0 +1,10 @@
+@mixin font($fs: 14px, $fw: 500, $lh: 1.14) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+}
+
+@mixin container($dspl: flex, $al-it: center) {
+  display: $dspl;
+  align-items:  $al-it;
+   }
