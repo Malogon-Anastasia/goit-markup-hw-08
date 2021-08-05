@@ -1,6 +1,5 @@
 .customers {
-    padding-top: 94px;
-    padding-bottom: 94px;
+  padding: 60px 0;
   }
   
 .customers__title {
@@ -14,14 +13,22 @@
  }
   
  .customers__list {
- display: flex;
- justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
  }
   
  .customers__list-item {
-  @include container;
-  justify-content: center;
-   }
+  margin: 15px;
+  width: calc((100% - 2 * 30px) / 2);
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 3 * 30px) / 3);
+  }
+  @media screen and (min-width: 1200px) {
+    width: 170px;
+  }
+}
    .customers__list-link {
    @include container;
    justify-content: center;

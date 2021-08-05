@@ -72,6 +72,7 @@
     .join-us__slogan {
     display: block;
     margin-bottom: 20px;
+
     font-weight: 700;
     font-size: 14px;
     line-height: 1.143;
@@ -238,5 +239,8 @@
       .join-us {
         margin-bottom: 0px;
         margin-right: 93px;
+      }
+      .join-us__slogan {
+        text-align: start;
       }
   }
