@@ -1,117 +1,380 @@
-.header-container {
-  @include container;
-    }
-  
-    .header {
-      padding-top: 24px;
-    padding-bottom: 25px;
-    }
-
-
-/*навигационные элементы*/
-.navigation {
-  @include container;
+.navigation__list {
+  display: none;
 }
-.logo {
-  margin-right: 90px;
-}
-.menu {
-  @include container;
-}
-.menu-item:not(:last-child) {
-  margin-right: 50px;
-}
-
-.list-info {
+.header__container {
   display: flex;
-  margin-left: auto;
-  margin-right: 40px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 15px;
+  }
+
+.contact-list {
+  display: none;
 }
 
-.menu-link {
-@include font;
-letter-spacing: 0.02em;
+.header__menu-button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+  .menu-button__svg {
+    width: 40px;
+    height: 40px;
+    fill: var(--accent-color);
+  }
 
+  .mobile-menu {
+    position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 480px;
+  height: 796px;
+background-color: var(--title-light-color);
+
+opacity: 0;
+visibility: hidden;
+pointer-events: none;
+transition: opacity 500ms linear, visibility 500ms linear;
+}
+
+.mobile-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.close-btn {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  
+  &__icon {
+  width: 40px;
+  height: 40px;
+  fill: var(--accent-color);
+}
+}
+
+.mobile-menu__close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  }
+  .mobile-menu__container {
+    position: relative;
+    padding-top: 48px;
+    padding-left: 40px;
+    }
+
+    .nav-list_item:not(:last-child) {
+      margin-bottom: 32px;
+    }
+    .nav-list__link {
+      display: flex;
+      font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 40px;
+line-height: 47px;
+text-align: center;
+letter-spacing: 0.02em;
 color: var(--main-text-color);
-transition: color var(--transition-timing);
-
-&:hover,
-&:focus {
-color: var(--accent-color)
-}
-}
+    }
 
 
-.info {
-@include container;
-@include font;
-letter-spacing: 0.02em;
-margin-right: 50px;
-color: var(--secondary-text-color);
-transition: color var(--transition-timing);
+    .active-page {
+        text-align: center;
+        position: relative;
+        color: var(--accent-color);
+    }
 
-&:hover,
-&:focus {
-color: var(--accent-color);
-}
-}
+// .header {
+//   position: fixed;
+//   width: 100%;
+//   top: 0;
+//   left: 0;
 
-.tel-link {
-  @include container;
-  @include font;
-  letter-spacing: 0.02em;
+//   background-color: $title-light-color;
+//   z-index: 100;
+// }
+
+// .navigation {
+//   display:flex;
+//   align-content: center;
+//   align-items: baseline;
+// }
+
+// .navigation__list {
+//   display: block;
+//   margin-right: auto;
+//   margin-left: auto;
+
+//   &-item{
+//       text-align: center;
+//   }
+// }
+
+
+// .navigation__list-link {
+//    @include font (500, 18px, 1.167, 0.02em);
+//   color: $title-dark-color;
+//   transition: color $transition-timing;
+    
+
+//   &:hover,
+//   &:focus {
+//   color: $accent-color;
+//   }
+// }
+
+// .active-page {
+//   text-align: center;
+//   position: relative;
+//   color: $accent-color;
+
+//   .header & {
+//       padding-bottom: 8px;
+//       display: inline-block;
+//       align-items: center;
+//   }
+
+//   &::after {
+//       position: absolute;
+//       bottom: 0;
+//       content: "";
+//       display: block;
+//       align-self: center;
+//       width: 100%;
+//       height: 4px;
+//       background-color: $accent-color;
+//       border-radius: 4px;
+//   }
+// }
+
+// .contact-list__link {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   height: 16px;
+//   @include font (500, 18px, 1.167, 0.02em);
+//   color: $description-color;
+//   transition: color $transition-timing;
+
+//   &:hover,
+//   &:focus {
+//       color: $accent-color;
+//   }
+// }
+
+// .contact-list__svg {
+//   margin-right: 10px;
+//   fill: $description-color;
+//   transition: fill $transition-timing;
+
+//   &--envelope {
+//       width: 16px;
+//       height: 12px;
+//   }
+
+//   &--smartphone {
+//       width: 10px;
+//       height: 16px;
+//   }
+// }
+
+
+// .contact-list__item {
+//   display: block;
+// }
+
+// .contact-list__link:hover .contact-list__svg,
+// .contact-list__link:focus .contact-list__svg {
+//   fill: $accent-color;
+// }
+
+// .header__menu-button {
+//   display: inline-flex;
+//   margin: 0;
+//   padding: 0;
+//   border: none;
+//   background-color: transparent;
+//   cursor: pointer;
+// }
+
+// .menu-button__svg {
+//   width: 40px;
+//   height: 40px;
+//   fill: $logo-dark-color;
+
+//   .header__menu-button:focus &,
+//   .header__menu-button:hover & {
+//       fill: $accent-color;
+//   }
+// }
+
+// @media screen and (min-width:768px) {
+//   .mobile-menu__container {
+//       display: none;
+//   }
+// }
+
+// .icon-cross {
+//   display: none;
+// }
+
+// .header__menu-button.is-open .icon-cross {
+//   display: block;
+// }
+
+// .header__menu-button.is-open .icon-menu {
+//   display: none;
+// }
+
+// .header__menu-container.is-open {
+//   display: block;
+// }
+
+// @media screen and (max-width:767px) {
+
+//   .header-mobile {
+//       display: flex;
+//       align-items: center;
+//       justify-content: space-between;
+//       width: 100%;
+//       height: 60px;
+//       padding: 16px 0;
+//   }
+
+//   .navigation {
+//       justify-content: space-between;
+//   }
+
+//   .navigation__list {
+//       margin-bottom: 60px;
+//   }
+
+//   .navigation__list-item:not(:last-child) {
+//       margin-bottom: 40px;
+//   }
+
+//   .header__menu-container {
+//       display:none;
+//       position: absolute;
+//       top: 100%;
+//       left: 0;
+//       z-index: 10;
+//       padding: 60px 20px;
+//       width: 100%;
+//       height: 393px;
+//       background-color: $title-light-color;
+//       border-top: 1px $section-border-color;
+//   }
+
+//   .contact-list__item {
+//       text-align: center;
+
+//       &:not(:last-child) {
+//           margin-bottom: 16px;
+//       }
+//   }
+// }
+
+// @media screen and (min-width:768px) {
+//   .header {
+//       display: flex;
+//       align-content: center;
+
+      
+//       & .container {
+//           height: 80px;
+//           align-items: center;
+//       }
+
+//       & .active-page {
+//           padding-bottom: 30px;
+//       }
+//   }
+
+//   .navigation {
+//       height: 100%;
+//   }
+
+//   .navigation .header__menu-container {
+//       display: flex;
+//       align-items: center;
+//       height: 80px;
+//       width: 100%;
+//   }
+
+
+//   .navigation__list {
+//       display: flex;
+//       align-items: center;
+//       margin-right: 83px;
+//       height: 100%;
+//       width: 100%;
   
-  color: var(--secondary-text-color);
-  transition: color var(--transition-timing);
+//       &-link {
+//           @include font (500, 14px, 1.143, 0.02em);
+//       }
   
-  &:hover,
-  &:focus {
-  color: var(--accent-color);  
-  }
-  }
+//       &-item:not(:last-child) {
+//           margin-right: 50px;
+//       }
 
-.contact-list-item {
-  @include container;
-}
-
-.active-page {
-    color: var(--accent-color);
-
-   &:after {
-      position: absolute;
-      bottom: 0px;
-      content: "";
-      display: block;
-      width: 100%;
-      height: 4px;
-      background-color: var(--accent-color);
-      border-radius: 4px;
-  }
-}
-.header .active-page {
-  padding-bottom: 31px;
-}
-
-.active-page {
-  position: relative;
-}
+//       &-item {
+//           height: 14px;
+//       }
+//   }
+// }
 
 
-.contact-list-svg {
-  @include container;
-  margin-right: 10px;
-  fill: var(--secondary-text-color);
-  transition: fill var(--transition-timing);
-  
-  .info:hover &,
-.tel-link:hover & {
-  fill: var(--accent-color);
-}
-.info:focus &,
-.tel-link:focus & {
-  fill: var(--accent-color);
-}
-}
+// @media screen and (min-width:768px) and (max-width:1199px) {
+//   .contact-list {
+
+//       display: block;
+       
+//       &__link {
+//           @include font (500, 12px, 1.167, 0.02em);
+//           justify-content: left;
+//       }
+
+//       &__item:not(:last-child) {
+//           margin-bottom: 10px;
+//       }
+
+//       &__item {
+//           text-align: left;
+//       }
+//   }
+// }
 
 
+// @media screen and (min-width:1200px) {
+//   .contact-list {
+//       display: flex;
+//       justify-content: end;
+//       align-items: center;
 
+//       &__item:not(:last-child) {
+//           margin-right: 30px;
+//       }
+
+//       &__link {
+//           @include font (500, 14px, 1.143, 0.02em);
+//           height:14px;
+//           width: max-content;
+//       }
+//   }
+
+//   .navigation__list {
+//       margin-right: 305px;
+//   }
+// }

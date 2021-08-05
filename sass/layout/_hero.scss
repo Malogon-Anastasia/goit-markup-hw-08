@@ -1,6 +1,6 @@
 .hero {
     max-width:100%;
-    padding: 200px 0;
+    padding: 118px 0;
     text-align: center;
     background-color: #2F303A;
     background-image: linear-gradient(
@@ -9,15 +9,15 @@
       ),
       url(../images/hero/bg-mobile@1x.jpg);
     background-size: cover;
-    margin: auto;
+    margin: 0 auto;
   }
   .hero .hero-title {
     margin-bottom: 30px;
-    min-width: 696px;
+    text-align: center;
     height: 120px;
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.364;
+    font-size: 26px;
+    line-height: 42px;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--title-light-color);
@@ -45,7 +45,7 @@
        
     }
 
-    //768+
+     //768+
 @media screen and (min-width: 481px) {
   .hero {
     background-image: linear-gradient(
