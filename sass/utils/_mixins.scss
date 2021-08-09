@@ -1,9 +1,9 @@
-@mixin font($fs: 14px, $fw: 500, $lh: 1.14) {
+@mixin font($fs:14px, $fw:400, $lh:1.71, $ls:0.03em) {
   font-size: $fs;
   font-weight: $fw;
   line-height: $lh;
+  letter-spacing: $ls;
 }
-
 @mixin container($dspl: flex, $al-it: center) {
   display: $dspl;
   align-items:  $al-it;
@@ -15,9 +15,9 @@
     transition-timing-function: $ttf;
 }
 
-@mixin font ($fw, $fs, $lh, $ls) {
-  font-weight: $fw;
-  font-size: $fs;
-  line-height: $lh;
-  letter-spacing: $ls;
-}
+// @mixin font ($fw, $fs, $lh, $ls) {
+//   font-weight: $fw;
+//   font-size: $fs;
+//   line-height: $lh;
+//   letter-spacing: $ls;
+// }
