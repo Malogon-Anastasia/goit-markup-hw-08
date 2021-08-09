@@ -49,6 +49,7 @@ img {
 
 .link {
   text-decoration: none;
+  color: inherit;
 }
 
 body {
@@ -452,6 +453,10 @@ body {
   border: none;
   padding: 0;
   line-height: 0;
+}
+
+.mobile-menu .current {
+  color: var(--accent-color);
 }
 
 .mobile-menu__icon {
