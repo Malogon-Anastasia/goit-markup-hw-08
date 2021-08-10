@@ -975,13 +975,6 @@ body {
   width: calc((100% - 2 * 30px) / 2);
 }
 
-@media screen and (max-width: 480px) {
-  .customers__list-item .customers__list-link {
-    width: 210px;
-    height: 92px;
-  }
-}
-
 @media screen and (min-width: 480px) and (max-width: 767px) {
   .customers__list-item .customers__list-link {
     width: 210px;
