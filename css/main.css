@@ -720,7 +720,7 @@ body {
 }
 
 .advantages {
-  padding: 94px 0;
+  padding: 60px 0;
 }
 
 .advantages__list-item {
@@ -783,6 +783,9 @@ body {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
+  .advantages {
+    padding: 60px 0;
+  }
   .advantages__list-item:nth-child(2n+1) {
     margin-right: 30px;
   }
@@ -792,6 +795,9 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
+  .advantages {
+    padding: 94px 0;
+  }
   .advantages__list-item {
     width: 270px;
   }
