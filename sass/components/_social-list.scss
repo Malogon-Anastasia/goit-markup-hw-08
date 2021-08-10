@@ -28,7 +28,7 @@
     
 @media screen and (min-width: 768px) and (max-width: 1199px){
   .social-list {
-    padding: 16px 74px 24px 74px;
+    padding: 16px 74px 0px 74px;
       }
   }
 
@@ -38,6 +38,6 @@
 // 1200+
 @media screen and (min-width: 1200px) {
     .social-list {
-    padding: 16px 32px 30px 32px;
+    padding: 16px 32px 0px 32px;
 }
 }
