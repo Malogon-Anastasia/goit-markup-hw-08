@@ -665,7 +665,7 @@ body {
 .hero .hero-title {
   margin-bottom: 30px;
   text-align: center;
-  height: 120px;
+  height: 84px;
   font-weight: 900;
   font-size: 26px;
   line-height: 42px;
@@ -710,6 +710,7 @@ body {
 @media screen and (min-width: 1199px) {
   .hero .hero-title {
     font-weight: 900;
+    height: 120px;
     font-size: 44px;
     line-height: 60px;
   }
