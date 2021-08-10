@@ -14,17 +14,33 @@
   
  .customers__list {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   margin: -15px;
  }
-  
+ 
+ 
  .customers__list-item {
   margin: 15px;
   width: calc((100% - 2 * 30px) / 2);
 
-  @media screen and (min-width: 768px) {
-    width: calc((100% - 3 * 30px) / 3);
+  @media screen and (min-width: 480px) {
+    
+    .customers__list-link {
+      width: 210px;
+      height: 92px;
+    }
   }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: calc((100% - 3 * 30px) / 3);
+    
+    .customers__list-link {
+    width: 226px;
+    height: 92px;
+  }
+}
+
   @media screen and (min-width: 1200px) {
     width: 170px;
   }
