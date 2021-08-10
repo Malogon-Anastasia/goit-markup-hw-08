@@ -708,14 +708,14 @@ body {
 }
 
 @media screen and (min-width: 1199px) {
+  .hero {
+    padding: 200px 0;
+  }
   .hero .hero-title {
     font-weight: 900;
     height: 120px;
     font-size: 44px;
     line-height: 60px;
-  }
-  .hero {
-    padding: 120px 0;
   }
 }
 
